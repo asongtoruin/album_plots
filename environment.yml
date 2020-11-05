@@ -1,0 +1,11 @@
+name: album_sounds
+channels:
+  - conda-forge
+  - pypi
+  - defaults
+dependencies:
+  - matplotlib=3.3.2=py37hc8dfbb8_1
+  - pandas=1.1.4=py37h08fd248_0
+  - pip=20.2.4=py_0
+  - python=3.7.8=h60c2a47_1_cpython
+  - seaborn=0.11.0=h57928b3_1
