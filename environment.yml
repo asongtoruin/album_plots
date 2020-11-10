@@ -8,4 +8,8 @@ dependencies:
   - pandas=1.1.4=py37h08fd248_0
   - pip=20.2.4=py_0
   - python=3.7.8=h60c2a47_1_cpython
+  - pyyaml=5.3.1=py37h0013d47_1
   - seaborn=0.11.0=h57928b3_1
+  - yaml=0.2.5=he774522_0
+  - pip:
+    - spotipy==2.16.1

@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Project folders
+Data/
+working/
+
+# Project files
+.cache-*
+body.png
+header.png
