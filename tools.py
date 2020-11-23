@@ -26,6 +26,23 @@ def get_album(client, album_id):
     return content
 
 
+def get_audio_features(client, track_ids, name):
+    feat_dir = DATA_DIR / 'audio features'
+    feat_dir.mkdir(exist_ok=True, parents=True)
+    
+    file_path = feat_dir / f'{name}.json'
+    
+    if file_path.is_file():
+        print('Reading saved data')
+        content = json.loads(file_path.read_text(encoding='utf8'))
+    else:
+        print('New connection')
+        content = client.audio_features(track_ids)
+        file_path.write_text(json.dumps(content, indent=4), encoding='utf8')
+        
+    return content
+
+
 def get_audio_analysis(client, song_id):
     album_dir = DATA_DIR / 'songs'
     album_dir.mkdir(exist_ok=True, parents=True)
